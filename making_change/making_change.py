@@ -3,7 +3,22 @@
 import sys
 
 def making_change(amount, denominations):
-  pass 
+  if amount < 0:
+    return 1
+
+  combinations = [0]*(amount + 1)
+  combinations[0] = 1
+
+  for d in denominations:
+    for c in range(1, len(combinations)):
+      if c >= d:
+        combinations[c] += combinations[c-d]
+    # print(d, combinations)
+
+  
+  return combinations[-1]
+
+  
 
 
 if __name__ == "__main__":
