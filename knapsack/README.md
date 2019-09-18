@@ -11,6 +11,8 @@ A bit more motivation - this is a very general optimization problem that can be 
 The specific goal of this exercise is to write a program that takes input files that look like this:
 
 ```
+(note: index size value)
+
 1 42 81
 2 42 42
 3 68 56
